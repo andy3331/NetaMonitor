@@ -7,8 +7,8 @@ Created on Fri Jul 12 20:34:21 2019
 Monitor for NETA supply of VAPES. Posts to gravys disco server (production)
 Currently set to be kicked off by NETA task in windows task scheduler.
 """
-import os
-import sys
+#import os
+#import sys
 
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
@@ -17,11 +17,11 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from seleniumwire import webdriver 
 from discord_webhook import DiscordWebhook, DiscordEmbed
-from apscheduler.schedulers.blocking import BlockingScheduler
+#from apscheduler.schedulers.blocking import BlockingScheduler
 import time
 from time import sleep
 import pickle
-
+#theres a slew of unused selenium references...the idea is that I will add some more functionality...just not yet.
 
 url = 'https://embed.neta.stickyguide.com/?dispensary_id=6391&menu_type=pickup&url=https://netacare.org/reserveahead/northampton/&online_ordering=true&data_user_type=null&access=undefined'
 title = 'NETA'
