@@ -51,14 +51,14 @@ def postToDisco(imageURL, title, description, price, strain, tac, environment):
     #have moved webhooks to local file in script folder. this way i can publish on git without exposing the url.
     if environment == 'prod':
         try:
-            with open('productionwebhook.txt', 'rb') as file:
+            with open('I:/projects/netamonitor/productionwebhook.txt', 'rb') as file:
                 production_webhook = file.read()
                 webhook = DiscordWebhook(url=production_webhook)
         except FileNotFoundError:
             print("Production Webhook not found")
     elif environment == 'test':
         try:
-            with open('testwebhook.txt', 'rb') as file:
+            with open('I:/projects/netamonitor/testwebhook.txt', 'rb') as file:
                 test_webhook = file.read()
                 webhook = DiscordWebhook(url=test_webhook)
         except FileNotFoundError:
